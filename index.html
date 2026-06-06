@@ -6,8 +6,8 @@
 
   <!-- Primary Meta Tags -->
   <meta name="title" content="Improving Emotional Text-to-Speech in Low-Resource Languages via Reinforcement Learning">
-  <meta name="description" content="Academic project page for an RL-enhanced IndexTTS2 framework that preserves emotional expressiveness during Chinese-to-Taiwanese low-resource TTS adaptation.">
-  <meta name="keywords" content="text-to-speech, reinforcement learning, GRPO, low-resource languages, Taiwanese speech synthesis, emotion control, IndexTTS2, prosody">
+  <meta name="description" content="Final project page for an RL-enhanced IndexTTS2 framework with VA-and-stress control for low-resource Taiwanese emotional TTS.">
+  <meta name="keywords" content="text-to-speech, reinforcement learning, GRPO, low-resource languages, Taiwanese speech synthesis, VA control, ASQP, emotion control, IndexTTS2, prosody">
   <meta name="author" content="Hao-Chun Hsieh, Pao-Hua Hsu, Nien-Tse Wu">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
@@ -16,12 +16,12 @@
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="RL Final Project">
   <meta property="og:title" content="Improving Emotional Text-to-Speech in Low-Resource Languages via Reinforcement Learning">
-  <meta property="og:description" content="A two-stage IndexTTS2 adaptation framework with GRPO rewards for emotion retention, intensity, emphasis, and intelligibility.">
+  <meta property="og:description" content="Final results for IndexTTS2 Taiwanese emotional TTS: RL realignment plus VA-and-stress control improves SER while exposing an intelligibility and timbre trade-off.">
   <meta property="og:url" content="https://quaaaaa.github.io/RL_Final_Project/">
   <meta property="og:image" content="static/images/system-architecture.png">
-  <meta property="og:image:width" content="2010">
-  <meta property="og:image:height" content="2717">
-  <meta property="og:image:alt" content="Architecture for RL-enhanced IndexTTS2 low-resource emotional TTS adaptation">
+  <meta property="og:image:width" content="2646">
+  <meta property="og:image:height" content="2412">
+  <meta property="og:image:alt" content="Final report architecture for RL-enhanced IndexTTS2 low-resource emotional TTS adaptation">
   <meta property="article:published_time" content="2026-06-06T00:00:00.000Z">
   <meta property="article:author" content="Hao-Chun Hsieh, Pao-Hua Hsu, Nien-Tse Wu">
   <meta property="article:section" content="Research">
@@ -31,9 +31,9 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Improving Emotional Text-to-Speech in Low-Resource Languages via Reinforcement Learning">
-  <meta name="twitter:description" content="Preserving emotional expressiveness while adapting IndexTTS2 from Chinese to Taiwanese with RL-based realignment.">
+  <meta name="twitter:description" content="RL realignment and VA-and-stress control for preserving emotional expressiveness in Taiwanese TTS.">
   <meta name="twitter:image" content="static/images/system-architecture.png">
-  <meta name="twitter:image:alt" content="Architecture for RL-enhanced IndexTTS2 low-resource emotional TTS adaptation">
+  <meta name="twitter:image:alt" content="Final report architecture for RL-enhanced IndexTTS2 low-resource emotional TTS adaptation">
 
   <!-- Academic/Research Specific -->
   <meta name="citation_title" content="Improving Emotional Text-to-Speech in Low-Resource Languages via Reinforcement Learning">
@@ -42,7 +42,7 @@
   <meta name="citation_author" content="Wu, Nien-Tse">
   <meta name="citation_publication_date" content="2026">
   <meta name="citation_conference_title" content="Reinforcement Learning Final Project">
-  <meta name="citation_pdf_url" content="https://quaaaaa.github.io/RL_Final_Project/static/pdfs/proposal.pdf">
+  <meta name="citation_pdf_url" content="https://quaaaaa.github.io/RL_Final_Project/static/pdfs/final-report.pdf">
 
   <!-- Additional SEO -->
   <meta name="theme-color" content="#0f766e">
@@ -57,7 +57,7 @@
   <link rel="preconnect" href="https://documentcloud.adobe.com">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
-  <title>Low-Resource Emotional TTS with RL | RL Final Project</title>
+  <title>Low-Resource Emotional TTS with RL | Final Report</title>
 
   <!-- Favicon and App Icons -->
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
@@ -98,7 +98,7 @@
     "@context": "https://schema.org",
     "@type": "ScholarlyArticle",
     "headline": "Improving Emotional Text-to-Speech in Low-Resource Languages via Reinforcement Learning",
-    "description": "An RL-enhanced IndexTTS2 framework for preserving emotional expressiveness during low-resource language adaptation.",
+    "description": "Final report for an RL-enhanced IndexTTS2 framework using VA-and-stress control for low-resource Taiwanese emotional TTS.",
     "author": [
       {
         "@type": "Person",
@@ -120,8 +120,8 @@
     },
     "url": "https://quaaaaa.github.io/RL_Final_Project/",
     "image": "static/images/system-architecture.png",
-    "keywords": ["text-to-speech", "reinforcement learning", "GRPO", "low-resource languages", "Taiwanese", "IndexTTS2", "emotion control"],
-    "abstract": "This project studies how to preserve and recover emotional expressiveness when adapting an expressive TTS model from a high-resource language to a low-resource language. The proposed framework combines parameter-efficient IndexTTS2 adaptation with GRPO-based emotional and prosodic realignment.",
+    "keywords": ["text-to-speech", "reinforcement learning", "GRPO", "low-resource languages", "Taiwanese", "IndexTTS2", "VA control", "ASQP", "emotion control"],
+    "abstract": "This final report studies how to preserve and recover emotional expressiveness when adapting expressive TTS models from high-resource languages to Taiwanese. The system combines IndexTTS2 fine-tuning, an ASQP-derived VA-and-stress control mechanism, a phonemic Taiwanese front-end, and GRPO-based emotional realignment. Experiments on 2,752 TAT-Vol1 utterances show stronger speech emotion recognition for the proposed system with a bounded WER increase and a remaining speaker-similarity trade-off.",
     "isAccessibleForFree": true,
     "license": "https://creativecommons.org/licenses/by-sa/4.0/",
     "mainEntity": {
@@ -165,32 +165,32 @@
         <a href="#abstract" class="work-item">
           <div class="work-info">
             <h5>Abstract</h5>
-            <p>Low-resource emotional TTS transfer problem.</p>
-            <span class="work-venue">Project overview</span>
+            <p>Final low-resource emotional TTS framing.</p>
+            <span class="work-venue">Overview</span>
           </div>
           <i class="fas fa-arrow-down"></i>
         </a>
         <a href="#method" class="work-item">
           <div class="work-info">
             <h5>Method</h5>
-            <p>Parameter-efficient adaptation followed by GRPO realignment.</p>
-            <span class="work-venue">Algorithm</span>
+            <p>ASQP, phonemic front-end, VA-and-stress control, and GRPO.</p>
+            <span class="work-venue">System</span>
           </div>
           <i class="fas fa-arrow-down"></i>
         </a>
-        <a href="#diagnostics" class="work-item">
+        <a href="#results" class="work-item">
           <div class="work-info">
-            <h5>Evaluation</h5>
-            <p>Objective metrics, human tests, and baseline comparisons.</p>
-            <span class="work-venue">Protocol</span>
+            <h5>Results</h5>
+            <p>SER, WER, SS, and ablation results.</p>
+            <span class="work-venue">Final report</span>
           </div>
           <i class="fas fa-arrow-down"></i>
         </a>
-        <a href="#preliminary" class="work-item">
+        <a href="#conclusion" class="work-item">
           <div class="work-info">
-            <h5>Preliminary</h5>
-            <p>Initial Taiwanese TTS MOS baseline observation.</p>
-            <span class="work-venue">Pilot result</span>
+            <h5>Conclusion</h5>
+            <p>Emotion, intelligibility, and timbre trade-offs.</p>
+            <span class="work-venue">Takeaways</span>
           </div>
           <i class="fas fa-arrow-down"></i>
         </a>
@@ -204,7 +204,7 @@
         <div class="container is-max-desktop">
           <div class="columns is-centered">
             <div class="column has-text-centered">
-              <p class="paper-kicker">Low-Resource Expressive TTS &middot; IndexTTS2 &middot; GRPO</p>
+              <p class="paper-kicker">Final Report &middot; Taiwanese Emotional TTS &middot; IndexTTS2 + GRPO</p>
               <h1 class="title is-1 publication-title">Improving Emotional Text-to-Speech in Low-Resource Languages via Reinforcement Learning</h1>
 
               <div class="is-size-5 publication-authors">
@@ -230,12 +230,12 @@
                   </span>
 
                   <span class="link-block">
-                    <a href="static/pdfs/proposal.pdf" target="_blank" rel="noreferrer"
+                    <a href="static/pdfs/final-report.pdf" target="_blank" rel="noreferrer"
                        class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="fas fa-file-pdf"></i>
                       </span>
-                      <span>Proposal</span>
+                      <span>Final Report</span>
                     </a>
                   </span>
 
@@ -250,12 +250,12 @@
                   </span>
 
                   <span class="link-block">
-                    <a href="#diagnostics"
+                    <a href="#results"
                        class="external-link button is-normal is-rounded is-dark">
                       <span class="icon">
                         <i class="fas fa-chart-line"></i>
                       </span>
-                      <span>Evaluation</span>
+                      <span>Results</span>
                     </a>
                   </span>
                 </div>
@@ -272,12 +272,12 @@
         <div class="hero-body">
           <figure class="publication-banner teaser-figure">
             <img src="static/images/system-architecture.png"
-                 alt="RL-enhanced IndexTTS2 architecture for preserving emotion during low-resource language adaptation"
+                 alt="Final RL-enhanced IndexTTS2 architecture with ASQP annotation, VA-and-stress control, and reward models"
                  loading="eager">
           </figure>
           <h2 class="subtitle has-text-centered">
-            The framework first adapts an expressive IndexTTS2 model to Taiwanese with parameter-efficient tuning,
-            then applies GRPO rewards to recover emotion, intensity, local emphasis, and intelligibility.
+            The final system combines low-resource IndexTTS2 fine-tuning, ASQP-derived VA-and-stress control,
+            a Taiwanese phonemic front-end, and GRPO-based emotional realignment.
           </h2>
         </div>
       </div>
@@ -292,15 +292,15 @@
             <h2 class="title is-3">Abstract</h2>
             <div class="content has-text-justified">
               <p>
-                We study the loss of emotional capability that occurs when an expressive text-to-speech model trained
-                on a high-resource language is adapted to a low-resource language. Although the adapted model may stay
-                intelligible, its emotional controllability, rhythm, emphasis, and prosodic richness can become flatter.
+                We address emotional capability loss when expressive TTS models trained on high-resource languages are
+                adapted to Taiwanese. The model may remain intelligible after fine-tuning, but emotional controllability,
+                rhythm, emphasis, and prosodic richness can degrade under limited target-language data.
               </p>
               <p>
-                Our proposal builds on IndexTTS2 and treats Chinese-to-Taiwanese transfer as an emotion preservation
-                problem. Instead of learning emotion from scratch, the method aims to retain the pretrained expressive
-                prior while improving target-language pronunciation through lightweight adaptation and reinforcement
-                learning based emotional realignment.
+                The final framework builds on IndexTTS2 and adds a VA-and-stress control mechanism: valence-arousal
+                signals are derived from Aspect Sentiment Quad Prediction, while lexical emphasis markers guide local
+                prosody. We combine this control path with a Taiwanese romanized phonemic front-end and GRPO-based
+                emotional realignment to improve emotion intensity and prosodic control during low-resource transfer.
               </p>
             </div>
           </div>
@@ -312,23 +312,23 @@
     <!-- Dataset and facts -->
     <section class="section">
       <div class="container is-max-desktop">
-        <h2 class="title is-3 has-text-centered">Project Snapshot</h2>
+        <h2 class="title is-3 has-text-centered">Experiment Snapshot</h2>
         <div class="stat-grid">
           <article class="stat-card">
-            <span class="stat-value">2</span>
-            <span class="stat-label">Training stages: low-resource adaptation plus RL realignment</span>
+            <span class="stat-value">2,752</span>
+            <span class="stat-label">TAT-Vol1 utterances synthesized for evaluation</span>
           </article>
           <article class="stat-card">
-            <span class="stat-value">4</span>
-            <span class="stat-label">Reward components for emotion, intensity, emphasis, and ASR content</span>
+            <span class="stat-value">7</span>
+            <span class="stat-label">Target emotions: angry, happy, fearful, disgusted, sad, surprised, neutral</span>
           </article>
           <article class="stat-card">
-            <span class="stat-value">1-5h</span>
-            <span class="stat-label">Target low-resource adaptation subset planned for Taiwanese</span>
+            <span class="stat-value">6</span>
+            <span class="stat-label">Systems compared across CosyVoice and IndexTTS2 variants</span>
           </article>
           <article class="stat-card">
-            <span class="stat-value">208h</span>
-            <span class="stat-label">TAT_MOE parallel recordings available for Taiwanese experiments</span>
+            <span class="stat-value">0</span>
+            <span class="stat-label">IndexTTS2 generation failures in the evaluation synthesis run</span>
           </article>
         </div>
       </div>
@@ -343,36 +343,57 @@
           <div class="column is-one-third">
             <article class="method-card">
               <span class="method-step">1</span>
-              <h3>Expressive Base Model</h3>
-              <p>Start from a high-resource expressive IndexTTS2 model that already carries emotion and prosody priors.</p>
+              <h3>Low-Resource Fine-Tuning</h3>
+              <p>Adapt expressive IndexTTS2 to Taiwanese while trying to preserve the pretrained emotional prior.</p>
             </article>
           </div>
           <div class="column is-one-third">
             <article class="method-card">
               <span class="method-step">2</span>
-              <h3>Target-Language Adaptation</h3>
-              <p>Use parameter-efficient modules such as adapters or LoRA to learn Taiwanese pronunciation while limiting catastrophic forgetting.</p>
+              <h3>ASQP Annotation</h3>
+              <p>Use aspect-sentiment quadruples to derive valence-arousal control and sentiment-bearing emphasis spans.</p>
             </article>
           </div>
           <div class="column is-one-third">
             <article class="method-card">
               <span class="method-step">3</span>
-              <h3>RL Emotional Realignment</h3>
-              <p>Update the autoregressive text-to-semantic policy with rewards computed from decoded speech waveforms.</p>
+              <h3>Phonemic Front-End</h3>
+              <p>Drive generation with Taiwanese romanization and numeric tones, bypassing Mandarin/English normalization.</p>
+            </article>
+          </div>
+          <div class="column is-one-third">
+            <article class="method-card">
+              <span class="method-step">4</span>
+              <h3>VA-and-Stress Control</h3>
+              <p>Scale the emotion vector with VA-conditioned adjustment and wrap local stress spans in emphasis markers.</p>
+            </article>
+          </div>
+          <div class="column is-one-third">
+            <article class="method-card">
+              <span class="method-step">5</span>
+              <h3>GRPO Realignment</h3>
+              <p>Optimize the autoregressive text-to-semantic policy with decoded-speech rewards and a KL anchor.</p>
+            </article>
+          </div>
+          <div class="column is-one-third">
+            <article class="method-card">
+              <span class="method-step">6</span>
+              <h3>Reward Models</h3>
+              <p>Score speech with emotion recognition, global intensity, local emphasis, and ASR content rewards.</p>
             </article>
           </div>
           <div class="column is-half">
             <article class="formula-card">
               <h3>Composite Reward</h3>
               <p class="formula">R = &lambda;<sub>1</sub> R<sub>emo</sub> + &lambda;<sub>2</sub> R<sub>int</sub> + &lambda;<sub>3</sub> R<sub>emp</sub> + &lambda;<sub>4</sub> R<sub>ASR</sub></p>
-              <p>Emotion classification, VAD-space intensity, pitch/energy emphasis, and ASR content rewards are balanced in one scalar signal.</p>
+              <p>Reward weights balance categorical emotion, VAD-space intensity, pitch/energy emphasis, and transcription faithfulness.</p>
             </article>
           </div>
           <div class="column is-half">
             <article class="formula-card">
               <h3>GRPO with KL Anchor</h3>
               <p class="formula">maximize E[R log &pi;(a|s)] - &beta; KL(&pi; || p<sub>adapt</sub>)</p>
-              <p>The KL penalty keeps the policy close to the adapted reference model while exploring expressive improvements.</p>
+              <p>The KL penalty keeps the policy near the adapted reference model while allowing localized expressive improvements.</p>
             </article>
           </div>
         </div>
@@ -386,35 +407,35 @@
         <h2 class="title is-3 has-text-centered">System Architecture</h2>
         <div class="content has-text-justified">
           <p>
-            The policy observes input text, speaker timbre, duration constraints, and a target global emotion embedding.
-            It generates discrete semantic speech tokens, which are decoded into audio and evaluated by reward models
-            before GRPO updates the text-to-semantic transformer.
+            The final architecture separates annotation, text preparation, synthesis, reward computation, and policy
+            update. Taiwanese test sentences are back-translated only for ASQP annotation when Chinese-language
+            aspect-sentiment labels are unavailable, while the synthesis path itself uses the romanized Taiwanese front-end.
           </p>
         </div>
         <figure class="architecture-figure">
           <img src="static/images/system-architecture.png"
-               alt="Architecture diagram for RL-enhanced IndexTTS2 with emotion, intensity, prosody, and content rewards"
+               alt="Final architecture diagram for IndexTTS2 fine-tuning, VA-and-stress control, and GRPO reward optimization"
                loading="lazy">
           <figcaption>
-            The adaptation stage aligns the model to Taiwanese; the RL stage uses emotion, intensity, local-emphasis,
-            and ASR rewards to mitigate emotional forgetting during low-resource transfer.
+            The proposed system evaluates decoded speech with emotion, intensity, prosody, and content rewards, then
+            updates the text-to-semantic policy through GRPO while anchoring it to the adapted model.
           </figcaption>
         </figure>
       </div>
     </section>
     <!-- End system architecture -->
 
-    <!-- Evaluation plan -->
-    <section class="section hero is-light anchor-section" id="diagnostics">
+    <!-- Results -->
+    <section class="section hero is-light anchor-section" id="results">
       <div class="container">
-        <h2 class="title is-3 has-text-centered">Evaluation Plan</h2>
+        <h2 class="title is-3 has-text-centered">Final Results</h2>
         <div class="columns is-centered">
           <div class="column is-10">
             <div class="content has-text-justified">
               <p>
-                The evaluation directly measures emotional forgetting and recovery across three stages: before
-                adaptation, after naive or parameter-efficient adaptation, and after RL optimization. The protocol
-                combines objective speech metrics with human listening tests for emotional intensity and local emphasis.
+                The final evaluation compares CosyVoice2, CosyVoice3, and four IndexTTS2 variants. The IndexTTS2 ablation
+                crosses training stage, fine-tuned versus RL-realigned, with generation-time control, none versus
+                VA-and-stress. The full system is IndexTTS2-proposed.
               </p>
             </div>
           </div>
@@ -422,19 +443,19 @@
 
         <div class="metric-grid">
           <article class="metric-card">
-            <span class="metric-label">Objective quality</span>
-            <strong>WER / SS / ES</strong>
-            <p>ASR word error rate, speaker similarity, and emotion similarity or accuracy track intelligibility, identity, and target emotion.</p>
+            <span class="metric-label">Best SER mean</span>
+            <strong>0.30</strong>
+            <p>IndexTTS2-proposed achieves the strongest emotion recognition, especially improving happy and surprise.</p>
           </article>
           <article class="metric-card">
-            <span class="metric-label">Emotion retention</span>
-            <strong>ERG</strong>
-            <p>Emotion Retention Gap quantifies degradation after adaptation; recovery ratio measures how much RL restores.</p>
+            <span class="metric-label">WER trade-off</span>
+            <strong>0.8404</strong>
+            <p>The full system raises WER versus plain fine-tuning, but the increase is bounded under the shared IndexTTS2 scoring setup.</p>
           </article>
           <article class="metric-card">
-            <span class="metric-label">Human evaluation</span>
-            <strong>MOS / EIT / EAT</strong>
-            <p>Listeners rate quality, similarity, prosody, and emotion while comparing intensity and perceived emphasis positions.</p>
+            <span class="metric-label">Speaker similarity</span>
+            <strong>0.4155</strong>
+            <p>Stronger emotional rendering improves SER while lowering speaker similarity, making timbre retention the next bottleneck.</p>
           </article>
         </div>
 
@@ -442,58 +463,75 @@
           <table class="table is-fullwidth is-hoverable">
             <thead>
               <tr>
-                <th>System</th>
-                <th>Role</th>
-                <th>Emotion preservation mechanism</th>
-                <th>What it measures</th>
+                <th>Model</th>
+                <th>SER mean &uarr;</th>
+                <th>WER mean &darr;</th>
+                <th>SS mean &uarr;</th>
+                <th>Interpretation</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Original IndexTTS2</td>
-                <td>High-resource upper bound</td>
-                <td>Pretrained expressive prior</td>
-                <td>Source emotional capability before transfer</td>
-              </tr>
-              <tr>
-                <td>Naive fine-tuning</td>
-                <td>Low-resource baseline</td>
-                <td>None</td>
-                <td>Severity of emotional forgetting</td>
-              </tr>
-              <tr>
-                <td>Parameter-efficient adaptation</td>
-                <td>Adaptation baseline</td>
-                <td>Adapters or LoRA</td>
-                <td>Whether freezing most parameters improves retention</td>
-              </tr>
-              <tr class="is-selected-row">
-                <td>Adaptation + RL</td>
-                <td>Proposed method</td>
-                <td>GRPO rewards plus KL anchoring</td>
-                <td>Recovery of emotion, intensity, and prosodic control</td>
+                <td>CosyVoice2</td>
+                <td>0.14</td>
+                <td>1.6663</td>
+                <td>0.5812</td>
+                <td>Strong timbre baseline, weak non-neutral emotion recognition.</td>
               </tr>
               <tr>
                 <td>CosyVoice3</td>
-                <td>Cross-model baseline</td>
-                <td>Emotion instruction prompting</td>
-                <td>Comparison with a strong zero-shot TTS system</td>
+                <td>0.13</td>
+                <td>2.1102</td>
+                <td>0.5725</td>
+                <td>Similar timbre strength with limited emotional controllability.</td>
+              </tr>
+              <tr>
+                <td>IndexTTS2-FT</td>
+                <td>0.27</td>
+                <td>0.7050</td>
+                <td>0.4561</td>
+                <td>Best IndexTTS2 intelligibility, but less expressive than the full system.</td>
+              </tr>
+              <tr>
+                <td>IndexTTS2-FT+va-emphasis</td>
+                <td>0.27</td>
+                <td>0.7408</td>
+                <td>0.4633</td>
+                <td>Control has limited effect before RL realignment.</td>
+              </tr>
+              <tr>
+                <td>IndexTTS2-FT+RL</td>
+                <td>0.28</td>
+                <td>0.8162</td>
+                <td>0.4333</td>
+                <td>RL boosts surprise and anger while increasing WER and lowering timbre similarity.</td>
+              </tr>
+              <tr class="is-selected-row">
+                <td>IndexTTS2-proposed</td>
+                <td>0.30</td>
+                <td>0.8404</td>
+                <td>0.4155</td>
+                <td>Full RL plus VA-and-stress system gives the best emotion recognition.</td>
               </tr>
             </tbody>
           </table>
         </div>
+        <p class="table-note">
+          Note: WER values for CosyVoice use a different ASR pipeline and stricter tone-sensitive normalization, so they
+          are diagnostic proxies rather than direct cross-model rankings against the IndexTTS2 rows.
+        </p>
       </div>
     </section>
-    <!-- End evaluation plan -->
+    <!-- End results -->
 
     <!-- Preliminary results -->
     <section class="section anchor-section" id="preliminary">
       <div class="container is-max-desktop">
-        <h2 class="title is-3 has-text-centered">Preliminary Baseline</h2>
+        <h2 class="title is-3 has-text-centered">Preliminary MOS Baseline</h2>
         <div class="content has-text-justified">
           <p>
-            As a pilot Taiwanese TTS baseline, 12 SARC laboratory members rated CosyVoice2 on 20 intelligibility and
-            naturalness sentences plus 10 voice-similarity sentences, producing 600 subjective rating samples.
+            The project began with a CosyVoice2 Taiwanese TTS listening test. Twelve SARC laboratory members rated 20
+            intelligibility and naturalness sentences plus 10 speaker-similarity sentences, yielding 600 subjective ratings.
           </p>
         </div>
         <div class="stat-grid">
@@ -514,37 +552,59 @@
             <span class="stat-label">Mean MOS</span>
           </article>
         </div>
-        <div class="content has-text-justified">
-          <p>
-            The high baseline quality motivates the next step: moving beyond intelligibility and naturalness to test
-            whether emotional expressiveness can be preserved and recovered during low-resource adaptation.
-          </p>
-        </div>
       </div>
     </section>
     <!-- End preliminary results -->
 
+    <!-- Conclusion -->
+    <section class="section hero is-light anchor-section" id="conclusion">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Conclusion</h2>
+        <div class="columns">
+          <div class="column">
+            <article class="method-card">
+              <h3>Control works best after RL.</h3>
+              <p>VA-and-stress control barely changes the fine-tuned checkpoint, but after RL it raises SER from 0.28 to 0.30.</p>
+            </article>
+          </div>
+          <div class="column">
+            <article class="method-card">
+              <h3>Emotion costs some clarity.</h3>
+              <p>WER rises from 0.7050 to 0.8404 along the full pipeline, with RL contributing the largest single increase.</p>
+            </article>
+          </div>
+          <div class="column">
+            <article class="method-card">
+              <h3>Timbre is the next challenge.</h3>
+              <p>The proposed system improves emotion recognition over CosyVoice baselines, but speaker similarity remains lower.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End conclusion -->
+
     <!-- Contributions -->
-    <section class="section hero is-light anchor-section" id="contributions">
+    <section class="section anchor-section" id="contributions">
       <div class="container is-max-desktop">
         <h2 class="title is-3 has-text-centered">Team Contributions</h2>
         <div class="columns">
           <div class="column">
             <article class="method-card">
               <h3>Hao-Chun Hsieh</h3>
-              <p>Leads problem formulation and methodology design, grounding the project in the MDP and GRPO objectives.</p>
+              <p>Leads project direction, problem formulation, methodology design, base code development, and proposal drafting.</p>
             </article>
           </div>
           <div class="column">
             <article class="method-card">
               <h3>Pao-Hua Hsu</h3>
-              <p>Directs project documentation and visual communication, including the proposal, architecture, poster, and presentation.</p>
+              <p>Generates the required audio files, refines the proposal, and supports architecture diagrams and poster design.</p>
             </article>
           </div>
           <div class="column">
             <article class="method-card">
               <h3>Nien-Tse Wu</h3>
-              <p>Spearheads empirical evaluation and implementation, covering dataset curation, setup, and hyperparameter tuning.</p>
+              <p>Extends the implementation, refines the proposal, and leads empirical evaluation, dataset curation, and tuning.</p>
             </article>
           </div>
         </div>
@@ -553,23 +613,23 @@
     <!-- End contributions -->
 
     <!-- Artifacts -->
-    <section class="section anchor-section" id="artifacts">
+    <section class="section hero is-light anchor-section" id="artifacts">
       <div class="container is-max-desktop">
         <h2 class="title is-3 has-text-centered">Artifacts</h2>
         <div class="content has-text-justified">
           <p>
-            The page mirrors the current proposal report and links to the project code. Heavy model checkpoints,
-            generated audio, and datasets should be mounted or downloaded separately when running the full experiments.
+            This page now mirrors the final report in <code>/srv/RL_project/repo/final_Report</code>. The PDF link below
+            points to the compiled final report, while the code repository contains the implementation and experiment scripts.
           </p>
         </div>
         <div class="publication-links has-text-centered">
           <span class="link-block">
-            <a href="static/pdfs/proposal.pdf" target="_blank" rel="noreferrer"
+            <a href="static/pdfs/final-report.pdf" target="_blank" rel="noreferrer"
                class="external-link button is-normal is-rounded is-dark">
               <span class="icon">
                 <i class="fas fa-file-pdf"></i>
               </span>
-              <span>Proposal PDF</span>
+              <span>Final Report PDF</span>
             </a>
           </span>
           <span class="link-block">
@@ -600,7 +660,7 @@
   title={Improving Emotional Text-to-Speech in Low-Resource Languages via Reinforcement Learning},
   author={Hsieh, Hao-Chun and Hsu, Pao-Hua and Wu, Nien-Tse},
   year={2026},
-  howpublished={Reinforcement Learning Final Project proposal},
+  howpublished={Reinforcement Learning Final Project final report},
   url={https://quaaaaa.github.io/RL_Final_Project/}
 }</code></pre>
       </div>

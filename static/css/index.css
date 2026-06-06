@@ -798,6 +798,14 @@ code {
   vertical-align: middle;
 }
 
+.table-note {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 1rem auto 0;
+  max-width: 1080px;
+}
+
 .is-selected-row td {
   background: #edf5f2;
   font-weight: 800;
