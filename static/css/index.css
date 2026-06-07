@@ -129,9 +129,10 @@ pre {
 .publication-title {
   font-family: 'Inter', sans-serif !important;
   font-weight: 800 !important;
+  font-size: clamp(1.5rem, 2.4vw, 1.9rem) !important;
   color: var(--text-primary) !important;
   margin-bottom: 2rem !important;
-  line-height: 1.1 !important;
+  line-height: 1.2 !important;
   overflow-wrap: anywhere;
 }
 
@@ -215,7 +216,7 @@ pre {
 
 .author-block {
   display: inline-block;
-  margin-right: 0.5rem;
+  margin-right: 2.0rem;
 }
 
 .publication-banner img {
@@ -718,6 +719,9 @@ code {
 .metric-card p {
   color: var(--text-secondary);
   margin: 0;
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }
 
 .method-step {
@@ -741,6 +745,207 @@ code {
   font-weight: 800;
   margin: 0.25rem 0 1rem !important;
   overflow-wrap: anywhere;
+}
+
+/* Audio Demo */
+.demo-subtitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.demo-desc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.demo-table {
+  background: var(--background-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  overflow-x: auto;
+}
+
+.demo-table table {
+  table-layout: fixed;
+  min-width: 640px;
+}
+
+.demo-table th:nth-child(2),
+.demo-table td:nth-child(2) {
+  width: 110px;
+  text-align: center;
+}
+
+.demo-table audio {
+  width: 100%;
+  display: block;
+}
+
+.demo-table td {
+  vertical-align: middle;
+  padding: 0.75rem 1rem;
+}
+
+.emotion-tag {
+  display: inline-block;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  text-transform: capitalize;
+}
+
+.emotion-tag.angry    { background: #fee2e2; color: #b91c1c; }
+.emotion-tag.happy    { background: #fef9c3; color: #854d0e; }
+.emotion-tag.fearful  { background: #ede9fe; color: #6d28d9; }
+.emotion-tag.disgusted { background: #d1fae5; color: #065f46; }
+.emotion-tag.surprised { background: #dbeafe; color: #1e40af; }
+.emotion-tag.sad       { background: #e0f2fe; color: #075985; }
+
+.gt-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 0.75rem;
+}
+
+.gt-grid audio {
+  width: 100%;
+}
+
+/* Appendix PDF Slideshow */
+.appendix-desc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+#appendix {
+  overflow: visible;
+}
+
+#appendix .appendix-container {
+  max-width: 1200px;
+  width: 92%;
+}
+
+.pdf-slideshow {
+  position: relative;
+  padding: 0 2.25rem;
+}
+
+.pdf-slide {
+  background: var(--background-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  display: none;
+  padding: 1.5rem 2rem;
+  width: 100%;
+}
+
+.pdf-slide.active {
+  display: block;
+}
+
+.pdf-slide canvas {
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+}
+
+@media screen and (max-width: 768px) {
+  #appendix .appendix-container {
+    width: 96%;
+  }
+
+  .pdf-slideshow {
+    padding: 0 1.5rem;
+  }
+
+  .pdf-slide {
+    padding: 1rem;
+  }
+}
+
+
+.pdf-arrow {
+  background: rgba(255,255,255,0.9);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  box-shadow: var(--shadow-md);
+  color: var(--text-primary);
+  cursor: pointer;
+  font-size: 1.1rem;
+  height: 2.6rem;
+  line-height: 1;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-60%);
+  transition: var(--transition);
+  width: 2.6rem;
+  z-index: 10;
+}
+
+.pdf-arrow-prev { left: 0; }
+.pdf-arrow-next { right: 0; }
+
+.pdf-arrow:hover {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+  box-shadow: var(--shadow-lg);
+}
+
+.pdf-counter {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0.5rem 0 0;
+  text-align: center;
+}
+
+.pdf-dots {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 0.75rem;
+}
+
+.pdf-dots .dot {
+  background: var(--border-color);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 10px;
+  padding: 0;
+  transition: var(--transition);
+  width: 10px;
+}
+
+.pdf-dots .dot.active {
+  background: var(--primary-color);
+  transform: scale(1.25);
+}
+
+.poster-embed {
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  width: calc(100% - 70rem);
+  margin: 0 auto;
+  height: 55vh;
+}
+
+.poster-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
 }
 
 .architecture-figure {

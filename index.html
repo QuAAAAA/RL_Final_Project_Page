@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Primary Meta Tags -->
-  <meta name="title" content="Improving Emotional Text-to-Speech in Low-Resource Languages via Reinforcement Learning">
+  <meta name="title" content="Low-Resource Emotional TTS via RL">
   <meta name="description" content="Final project page for an RL-enhanced IndexTTS2 framework with VA-and-stress control for low-resource Taiwanese emotional TTS.">
   <meta name="keywords" content="text-to-speech, reinforcement learning, GRPO, low-resource languages, Taiwanese speech synthesis, VA control, ASQP, emotion control, IndexTTS2, prosody">
   <meta name="author" content="Hao-Chun Hsieh, Pao-Hua Hsu, Nien-Tse Wu">
@@ -15,7 +15,7 @@
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="RL Final Project">
-  <meta property="og:title" content="Improving Emotional Text-to-Speech in Low-Resource Languages via Reinforcement Learning">
+  <meta property="og:title" content="Low-Resource Emotional TTS via RL">
   <meta property="og:description" content="Final results for IndexTTS2 Taiwanese emotional TTS: RL realignment plus VA-and-stress control improves SER while exposing an intelligibility and timbre trade-off.">
   <meta property="og:url" content="https://quaaaaa.github.io/RL_Final_Project/">
   <meta property="og:image" content="static/images/system-architecture.png">
@@ -30,13 +30,13 @@
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Improving Emotional Text-to-Speech in Low-Resource Languages via Reinforcement Learning">
+  <meta name="twitter:title" content="Low-Resource Emotional TTS via RL">
   <meta name="twitter:description" content="RL realignment and VA-and-stress control for preserving emotional expressiveness in Taiwanese TTS.">
   <meta name="twitter:image" content="static/images/system-architecture.png">
   <meta name="twitter:image:alt" content="Final report architecture for RL-enhanced IndexTTS2 low-resource emotional TTS adaptation">
 
   <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="Improving Emotional Text-to-Speech in Low-Resource Languages via Reinforcement Learning">
+  <meta name="citation_title" content="Low-Resource Emotional TTS via RL">
   <meta name="citation_author" content="Hsieh, Hao-Chun">
   <meta name="citation_author" content="Hsu, Pao-Hua">
   <meta name="citation_author" content="Wu, Nien-Tse">
@@ -91,13 +91,27 @@
   <script defer src="static/js/bulma-carousel.min.js"></script>
   <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+
+  <!-- MathJax for formal equation rendering -->
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$']],
+        displayMath: [['$$', '$$']],
+        tags: 'none'
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
 
   <!-- Structured Data for Academic Project Pages -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ScholarlyArticle",
-    "headline": "Improving Emotional Text-to-Speech in Low-Resource Languages via Reinforcement Learning",
+    "headline": "Low-Resource Emotional TTS via RL",
     "description": "Final report for an RL-enhanced IndexTTS2 framework using VA-and-stress control for low-resource Taiwanese emotional TTS.",
     "author": [
       {
@@ -162,6 +176,14 @@
         </button>
       </div>
       <div class="works-list">
+        <a href="#demo" class="work-item">
+          <div class="work-info">
+            <h5>Audio Demo</h5>
+            <p>Baseline vs. proposed synthesis samples.</p>
+            <span class="work-venue">Demo</span>
+          </div>
+          <i class="fas fa-arrow-down"></i>
+        </a>
         <a href="#abstract" class="work-item">
           <div class="work-info">
             <h5>Abstract</h5>
@@ -194,6 +216,22 @@
           </div>
           <i class="fas fa-arrow-down"></i>
         </a>
+        <a href="#poster" class="work-item">
+          <div class="work-info">
+            <h5>Poster</h5>
+            <p>Conference poster with system overview.</p>
+            <span class="work-venue">Poster</span>
+          </div>
+          <i class="fas fa-arrow-down"></i>
+        </a>
+        <a href="#appendix" class="work-item">
+          <div class="work-info">
+            <h5>Appendix</h5>
+            <p>Supplementary experiment data tables.</p>
+            <span class="work-venue">Appendix</span>
+          </div>
+          <i class="fas fa-arrow-down"></i>
+        </a>
       </div>
     </div>
   </div>
@@ -205,7 +243,7 @@
           <div class="columns is-centered">
             <div class="column has-text-centered">
               <p class="paper-kicker">Final Report &middot; Taiwanese Emotional TTS &middot; IndexTTS2 + GRPO</p>
-              <h1 class="title is-1 publication-title">Improving Emotional Text-to-Speech in Low-Resource Languages via Reinforcement Learning</h1>
+              <h1 class="title is-1 publication-title">Low-Resource Emotional TTS via RL</h1>
 
               <div class="is-size-5 publication-authors">
                 <span class="author-block">Hao-Chun Hsieh</span>
@@ -266,26 +304,94 @@
       </div>
     </section>
 
-    <!-- Teaser figure -->
-    <section class="hero teaser">
+
+    <!-- Audio Demo -->
+    <section class="section hero is-light anchor-section" id="demo">
       <div class="container is-max-desktop">
-        <div class="hero-body">
-          <figure class="publication-banner teaser-figure">
-            <img src="static/images/system-architecture.png"
-                 alt="Final RL-enhanced IndexTTS2 architecture with ASQP annotation, VA-and-stress control, and reward models"
-                 loading="eager">
-          </figure>
-          <h2 class="subtitle has-text-centered">
-            The final system combines low-resource IndexTTS2 fine-tuning, ASQP-derived VA-and-stress control,
-            a Taiwanese phonemic front-end, and GRPO-based emotional realignment.
-          </h2>
+        <h2 class="title is-3 has-text-centered">Audio Demo</h2>
+
+        <h3 class="demo-subtitle">Synthesis Comparison</h3>
+        <p class="demo-desc">Baseline = IndexTTS2-FT &nbsp;|&nbsp; Proposed = IndexTTS2-FT + RL + VA-stress control</p>
+        <div class="table-container demo-table">
+          <table class="table is-fullwidth">
+            <thead>
+              <tr>
+                <th>Ground Truth</th>
+                <th>Emotion</th>
+                <th>Baseline</th>
+                <th>Proposed</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><audio controls src="static/demo/GT/0014-2.1-03.wav"></audio></td>
+                <td><span class="emotion-tag angry">Angry</span></td>
+                <td><audio controls src="static/demo/baseline/000010_indextts_angry.wav"></audio></td>
+                <td><audio controls src="static/demo/proposed/000010_indextts_angry.wav"></audio></td>
+              </tr>
+              <tr>
+                <td><audio controls src="static/demo/GT/0014-5.23-03.wav"></audio></td>
+                <td><span class="emotion-tag angry">Angry</span></td>
+                <td><audio controls src="static/demo/baseline/000179_indextts_angry.wav"></audio></td>
+                <td><audio controls src="static/demo/proposed/000179_indextts_angry.wav"></audio></td>
+              </tr>
+              <tr>
+                <td><audio controls src="static/demo/GT/0014-2.2-03.wav"></audio></td>
+                <td><span class="emotion-tag disgusted">Disgusted</span></td>
+                <td><audio controls src="static/demo/baseline/000021_indextts_disgusted.wav"></audio></td>
+                <td><audio controls src="static/demo/proposed/000021_indextts_disgusted.wav"></audio></td>
+              </tr>
+              <tr>
+                <td><audio controls src="static/demo/GT/0014-6.10-03.wav"></audio></td>
+                <td><span class="emotion-tag disgusted">Disgusted</span></td>
+                <td><audio controls src="static/demo/baseline/000241_indextts_disgusted.wav"></audio></td>
+                <td><audio controls src="static/demo/proposed/000241_indextts_disgusted.wav"></audio></td>
+              </tr>
+              <tr>
+                <td><audio controls src="static/demo/GT/0014-2.11-03.wav"></audio></td>
+                <td><span class="emotion-tag fearful">Fearful</span></td>
+                <td><audio controls src="static/demo/baseline/000012_indextts_fearful.wav"></audio></td>
+                <td><audio controls src="static/demo/proposed/000012_indextts_fearful.wav"></audio></td>
+              </tr>
+              <tr>
+                <td><audio controls src="static/demo/GT/0014-4.31-03.wav"></audio></td>
+                <td><span class="emotion-tag happy">Happy</span></td>
+                <td><audio controls src="static/demo/baseline/000117_indextts_happy.wav"></audio></td>
+                <td><audio controls src="static/demo/proposed/000117_indextts_happy.wav"></audio></td>
+              </tr>
+              <tr>
+                <td><audio controls src="static/demo/GT/0014-5.34-03.wav"></audio></td>
+                <td><span class="emotion-tag happy">Happy</span></td>
+                <td><audio controls src="static/demo/baseline/000191_indextts_happy.wav"></audio></td>
+                <td><audio controls src="static/demo/proposed/000191_indextts_happy.wav"></audio></td>
+              </tr>
+              <tr>
+                <td><audio controls src="static/demo/GT/0014-5.66-03.wav"></audio></td>
+                <td><span class="emotion-tag sad">Sad</span></td>
+                <td><audio controls src="static/demo/baseline/000226_indextts_sad.wav"></audio></td>
+                <td><audio controls src="static/demo/proposed/000226_indextts_sad.wav"></audio></td>
+              </tr>
+              <tr>
+                <td><audio controls src="static/demo/GT/0014-2.4-03.wav"></audio></td>
+                <td><span class="emotion-tag surprised">Surprised</span></td>
+                <td><audio controls src="static/demo/baseline/000023_indextts_surprised.wav"></audio></td>
+                <td><audio controls src="static/demo/proposed/000023_indextts_surprised.wav"></audio></td>
+              </tr>
+              <tr>
+                <td><audio controls src="static/demo/GT/0014-4.9-03.wav"></audio></td>
+                <td><span class="emotion-tag surprised">Surprised</span></td>
+                <td><audio controls src="static/demo/baseline/000163_indextts_surprised.wav"></audio></td>
+                <td><audio controls src="static/demo/proposed/000163_indextts_surprised.wav"></audio></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
-    <!-- End teaser figure -->
+    <!-- End audio demo -->
 
     <!-- Paper abstract -->
-    <section class="section hero is-light anchor-section" id="abstract">
+    <section class="section anchor-section" id="abstract">
       <div class="container is-max-desktop">
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
@@ -310,7 +416,7 @@
     <!-- End paper abstract -->
 
     <!-- Dataset and facts -->
-    <section class="section">
+    <section class="section hero is-light">
       <div class="container is-max-desktop">
         <h2 class="title is-3 has-text-centered">Experiment Snapshot</h2>
         <div class="stat-grid">
@@ -336,7 +442,7 @@
     <!-- End dataset and facts -->
 
     <!-- Method -->
-    <section class="section hero is-light anchor-section" id="method">
+    <section class="section anchor-section" id="method">
       <div class="container is-max-desktop">
         <h2 class="title is-3 has-text-centered">Method</h2>
         <div class="columns is-multiline">
@@ -385,14 +491,18 @@
           <div class="column is-half">
             <article class="formula-card">
               <h3>Composite Reward</h3>
-              <p class="formula">R = &lambda;<sub>1</sub> R<sub>emo</sub> + &lambda;<sub>2</sub> R<sub>int</sub> + &lambda;<sub>3</sub> R<sub>emp</sub> + &lambda;<sub>4</sub> R<sub>ASR</sub></p>
+              <p class="formula">
+                $$R = \lambda_1 R_{\mathrm{emo}} + \lambda_2 R_{\mathrm{int}} + \lambda_3 R_{\mathrm{emp}} + \lambda_4 R_{\mathrm{ASR}}$$
+              </p>
               <p>Reward weights balance categorical emotion, VAD-space intensity, pitch/energy emphasis, and transcription faithfulness.</p>
             </article>
           </div>
           <div class="column is-half">
             <article class="formula-card">
               <h3>GRPO with KL Anchor</h3>
-              <p class="formula">maximize E[R log &pi;(a|s)] - &beta; KL(&pi; || p<sub>adapt</sub>)</p>
+              <p class="formula">
+                $$\max_{\pi}\;\mathbb{E}\!\left[R\log\pi(a\mid s)\right] - \beta\,\mathrm{KL}\!\left(\pi\,\big\|\,p_{\mathrm{adapt}}\right)$$
+              </p>
               <p>The KL penalty keeps the policy near the adapted reference model while allowing localized expressive improvements.</p>
             </article>
           </div>
@@ -402,7 +512,7 @@
     <!-- End method -->
 
     <!-- System architecture -->
-    <section class="section anchor-section" id="system-architecture">
+    <section class="section hero is-light anchor-section" id="system-architecture">
       <div class="container is-max-desktop">
         <h2 class="title is-3 has-text-centered">System Architecture</h2>
         <div class="content has-text-justified">
@@ -426,7 +536,7 @@
     <!-- End system architecture -->
 
     <!-- Results -->
-    <section class="section hero is-light anchor-section" id="results">
+    <section class="section anchor-section" id="results">
       <div class="container">
         <h2 class="title is-3 has-text-centered">Final Results</h2>
         <div class="columns is-centered">
@@ -525,7 +635,7 @@
     <!-- End results -->
 
     <!-- Preliminary results -->
-    <section class="section anchor-section" id="preliminary">
+    <section class="section hero is-light anchor-section" id="preliminary">
       <div class="container is-max-desktop">
         <h2 class="title is-3 has-text-centered">Preliminary MOS Baseline</h2>
         <div class="content has-text-justified">
@@ -557,7 +667,7 @@
     <!-- End preliminary results -->
 
     <!-- Conclusion -->
-    <section class="section hero is-light anchor-section" id="conclusion">
+    <section class="section anchor-section" id="conclusion">
       <div class="container is-max-desktop">
         <h2 class="title is-3 has-text-centered">Conclusion</h2>
         <div class="columns">
@@ -585,7 +695,7 @@
     <!-- End conclusion -->
 
     <!-- Contributions -->
-    <section class="section anchor-section" id="contributions">
+    <section class="section hero is-light anchor-section" id="contributions">
       <div class="container is-max-desktop">
         <h2 class="title is-3 has-text-centered">Team Contributions</h2>
         <div class="columns">
@@ -612,42 +722,50 @@
     </section>
     <!-- End contributions -->
 
-    <!-- Artifacts -->
-    <section class="section hero is-light anchor-section" id="artifacts">
-      <div class="container is-max-desktop">
-        <h2 class="title is-3 has-text-centered">Artifacts</h2>
-        <div class="content has-text-justified">
-          <p>
-            This page now mirrors the final report in <code>/srv/RL_project/repo/final_Report</code>. The PDF link below
-            points to the compiled final report, while the code repository contains the implementation and experiment scripts.
-          </p>
-        </div>
-        <div class="publication-links has-text-centered">
-          <span class="link-block">
-            <a href="static/pdfs/final-report.pdf" target="_blank" rel="noreferrer"
-               class="external-link button is-normal is-rounded is-dark">
-              <span class="icon">
-                <i class="fas fa-file-pdf"></i>
-              </span>
-              <span>Final Report PDF</span>
-            </a>
-          </span>
-          <span class="link-block">
-            <a href="https://github.com/QuAAAAA/RL_final_code" target="_blank" rel="noreferrer"
-               class="external-link button is-normal is-rounded is-dark">
-              <span class="icon">
-                <i class="fab fa-github"></i>
-              </span>
-              <span>Code Repository</span>
-            </a>
-          </span>
+    <!-- Poster -->
+    <section class="section anchor-section" id="poster">
+      <div class="container is-fluid">
+        <h2 class="title is-3 has-text-centered">Poster</h2>
+        <div class="poster-embed">
+          <iframe src="static/pdfs/poster.pdf" title="Project Poster" allowfullscreen></iframe>
         </div>
       </div>
     </section>
-    <!-- End artifacts -->
+    <!-- End poster -->
+
+    <!-- Appendix -->
+    <section class="section hero is-light anchor-section" id="appendix">
+      <div class="container appendix-container">
+        <h2 class="title is-3 has-text-centered">Appendix</h2>
+        <p class="has-text-centered appendix-desc">Supplementary experiment data tables</p>
+
+        <div class="pdf-slideshow">
+          <button class="pdf-arrow pdf-arrow-prev" onclick="changePdfSlide(-1)" aria-label="Previous">&#10094;</button>
+          <button class="pdf-arrow pdf-arrow-next" onclick="changePdfSlide(1)" aria-label="Next">&#10095;</button>
+
+          <div class="pdf-slides">
+            <div class="pdf-slide active" data-src="static/pdfs/1.pdf"><canvas></canvas></div>
+            <div class="pdf-slide" data-src="static/pdfs/2.pdf"><canvas></canvas></div>
+            <div class="pdf-slide" data-src="static/pdfs/3.pdf"><canvas></canvas></div>
+            <div class="pdf-slide" data-src="static/pdfs/4.pdf"><canvas></canvas></div>
+            <div class="pdf-slide" data-src="static/pdfs/5.pdf"><canvas></canvas></div>
+          </div>
+
+          <div class="pdf-dots">
+            <button class="dot active" onclick="goToPdfSlide(0)"></button>
+            <button class="dot" onclick="goToPdfSlide(1)"></button>
+            <button class="dot" onclick="goToPdfSlide(2)"></button>
+            <button class="dot" onclick="goToPdfSlide(3)"></button>
+            <button class="dot" onclick="goToPdfSlide(4)"></button>
+          </div>
+          <p class="pdf-counter">1 / 5</p>
+        </div>
+      </div>
+    </section>
+    <!-- End appendix -->
 
     <!-- BibTeX citation -->
-    <section class="section" id="BibTeX">
+    <section class="section anchor-section" id="BibTeX">
       <div class="container is-max-desktop content">
         <div class="bibtex-header">
           <h2 class="title">BibTeX</h2>
@@ -657,7 +775,7 @@
           </button>
         </div>
         <pre id="bibtex-code"><code>@misc{hsieh2026low_resource_emotional_tts_rl,
-  title={Improving Emotional Text-to-Speech in Low-Resource Languages via Reinforcement Learning},
+  title={Low-Resource Emotional TTS via RL},
   author={Hsieh, Hao-Chun and Hsu, Pao-Hua and Wu, Nien-Tse},
   year={2026},
   howpublished={Reinforcement Learning Final Project final report},
@@ -686,5 +804,54 @@
       </div>
     </div>
   </footer>
+  <script>
+    (function () {
+      const WORKER_SRC = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+      const slides  = document.querySelectorAll('.pdf-slide');
+      const dots    = document.querySelectorAll('.pdf-dots .dot');
+      const counter = document.querySelector('.pdf-counter');
+      const cache   = {};
+      let current   = 0;
+
+      async function renderSlide(idx) {
+        const slide  = slides[idx];
+        const canvas = slide.querySelector('canvas');
+        const url    = slide.dataset.src;
+        if (canvas.dataset.rendered) return;
+
+        const lib = window['pdfjs-dist/build/pdf'];
+        lib.GlobalWorkerOptions.workerSrc = WORKER_SRC;
+
+        if (!cache[url]) cache[url] = lib.getDocument(url).promise;
+        const pdf  = await cache[url];
+        const page = await pdf.getPage(1);
+
+        const containerW = slide.clientWidth || slide.parentElement.clientWidth;
+        const baseVP     = page.getViewport({ scale: 1 });
+        const scale      = containerW / baseVP.width;
+        const vp         = page.getViewport({ scale });
+
+        canvas.width  = vp.width;
+        canvas.height = vp.height;
+        await page.render({ canvasContext: canvas.getContext('2d'), viewport: vp }).promise;
+        canvas.dataset.rendered = '1';
+      }
+
+      window.changePdfSlide = function (dir) { goToPdfSlide(current + dir); };
+
+      window.goToPdfSlide = function (n) {
+        slides[current].classList.remove('active');
+        dots[current].classList.remove('active');
+        current = (n + slides.length) % slides.length;
+        slides[current].classList.add('active');
+        dots[current].classList.add('active');
+        counter.textContent = (current + 1) + ' / ' + slides.length;
+        renderSlide(current);
+      };
+
+      // render first slide on load
+      window.addEventListener('load', () => renderSlide(0));
+    })();
+  </script>
 </body>
 </html>
